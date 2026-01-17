@@ -1,0 +1,274 @@
+/* Estilos Premium para superar a referência */
+:root {
+    --gold: #d4af37;
+    --gold-light: #f3e5ab;
+    --dark: #0a0a0a;
+    --dark-glass: rgba(10, 10, 10, 0.9);
+    --text: #f0f0f0;
+    --gray: #888;
+}
+body {
+    background-color: var(--dark);
+    color: var(--text);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+/* Scrollbar personalizada */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
+
+/* Navegação Glassmorphism */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: var(--dark-glass);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    transition: all 0.3s ease;
+}
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+.logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    color: var(--text);
+    letter-spacing: 2px;
+    margin: 0;
+    position: relative;
+    z-index: 1001;
+}
+.nav-links { display: flex; gap: 30px; }
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--gold); }
+
+/* Hero Section com Animação */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: url('https://www.transparenttextures.com/patterns/cubes.png');
+    opacity: 0.03;
+    animation: rotateBackground 120s linear infinite;
+    pointer-events: none;
+}
+@keyframes rotateBackground { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.hero h2 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #fff 0%, #aaa 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.overline {
+    color: var(--gold);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    display: block;
+}
+.subtitle {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: #aaa;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.hero-btns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.btn-gold {
+    background: var(--gold);
+    color: var(--dark);
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid var(--gold);
+    transition: 0.3s;
+    border-radius: 4px;
+}
+.btn-gold:hover { background: transparent; color: var(--gold); }
+.btn-outline {
+    background: transparent;
+    color: var(--text);
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: 0.3s;
+    border-radius: 4px;
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Cards de Serviços */
+.section-dark { padding: 100px 0; position: relative; }
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 60px;
+}
+.card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 50px 40px;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    background: rgba(255,255,255,0.04);
+}
+.card h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+.card i {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 25px;
+    opacity: 0.8;
+}
+.card-link {
+    margin-top: 20px;
+    display: inline-block;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 2px;
+    transition: 0.3s;
+}
+.card-link:hover { color: var(--gold); }
+
+/* Animações de Scroll (Scroll Reveal) */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+/* Menu Mobile Icon */
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--text);
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+}
+
+/* Footer & Extras */
+.section-gold { background: #111; border-top: 1px solid #222; padding: 80px 0; }
+footer {
+    background: #050505;
+    border-top: 1px solid #222;
+    padding: 60px 0 20px;
+}
+.tiny {
+    font-size: 0.8rem;
+    color: #444;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Botão WhatsApp Flutuante */
+.float-wa {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    color: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    z-index: 2000;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+}
+.float-wa:hover { transform: scale(1.1); }
+
+@media(max-width: 768px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    .hero h2 { font-size: 2.5rem; }
+    
+    /* Menu Mobile Slide-in */
+    .mobile-menu-btn { display: block; }
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Escondido por padrão */
+        height: 100vh;
+        width: 75%;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 999;
+        border-left: 1px solid var(--gold);
+    }
+    .nav-links.active { right: 0; }
+    .nav-flex .btn-gold { display: none; } /* Oculta botão duplicado no mobile */
+    .hero-btns { flex-direction: column; }
+}

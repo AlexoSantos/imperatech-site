@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMPERA | Tecnologia de Elite</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-flex">
+            <h1 class="logo">IMPERA</h1>
+            <div class="nav-links">
+                <a href="#solucoes">Soluções</a>
+                <a href="#sobre">A Agência</a>
+                <a href="#contato">Contato</a>
+            </div>
+            <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+            <a href="https://wa.me/5519SEUNUMERO" class="btn-gold">Contatar</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container" style="position: relative; z-index: 2;">
+            <p class="overline hidden">Tecnologia de Alto Padrão</p>
+            <h2 class="hidden">Onde o digital<br>obedece ao real.</h2>
+            <p class="subtitle hidden">Sistemas de elite para o comércio local e turismo inteligente. Transforme sua visão em domínio de mercado.</p>
+            <div class="hero-btns hidden">
+                <a href="#solucoes" class="btn-gold">Explorar Soluções</a>
+                <a href="https://wa.me/5519SEUNUMERO" class="btn-outline">Falar com Especialista</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="solucoes" class="section-dark">
+        <div class="container">
+            <div class="hidden" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 style="font-family: 'Cinzel', serif; font-size: 2.5rem; color: #fff;">Nossas Frentes</h2>
+                <p style="color: #888; margin-top: 10px;">Duas vertentes, um único objetivo: Excelência.</p>
+            </div>
+
+            <div class="grid-2">
+                <div class="card hidden">
+                    <i class="fas fa-store"></i>
+                    <h3>Comércio Dominante</h3>
+                    <p style="color: #ccc; line-height: 1.6;">Não aceite ser invisível. A <strong>IMPERA Commerce</strong> transforma sua loja física em uma potência digital regional. Venda 24h com a solidez de quem comanda o mercado.</p>
+                    <a href="#" class="card-link">Conhecer Plataforma <i class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 5px; color: inherit;"></i></a>
+                </div>
+
+                <div class="card hidden">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Caminho Soberano</h3>
+                    <p style="color: #ccc; line-height: 1.6;">Para o <strong>Caminho da Fé</strong>, criamos o guia definitivo. Tecnologia que protege, orienta e conecta o peregrino ao sagrado, sem distrações.</p>
+                    <a href="#" class="card-link">Ver Guia Digital <i class="fas fa-arrow-right" style="font-size: 0.8rem; margin-left: 5px; color: inherit;"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="section-gold">
+        <div class="container">
+            <div style="display: flex; align-items: center; gap: 50px; flex-wrap: wrap;">
+                <div class="hidden" style="flex: 1;">
+                    <h3 style="font-family: 'Cinzel'; font-size: 2rem; color: #fff; margin-bottom: 20px;">Por que IMPERA?</h3>
+                    <p style="color: #aaa; margin-bottom: 20px; line-height: 1.6;">Nós não apenas escrevemos código. Nós arquitetamos soluções que resistem ao teste do tempo e escalam com o seu sucesso.</p>
+                    <ul style="list-style: none; color: #ccc;">
+                        <li style="margin-bottom: 12px;"><i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i> Design Premium & UX Elevada</li>
+                        <li style="margin-bottom: 12px;"><i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i> Performance Extrema</li>
+                    </ul>
+                </div>
+                <div class="hidden" style="flex: 1; text-align: center;">
+                    <i class="fas fa-chess-king" style="font-size: 10rem; color: rgba(212, 175, 55, 0.05);"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <h4 style="color: #fff; font-family: 'Cinzel'; letter-spacing: 1px;">IMPERA</h4>
+                <p class="tiny" style="text-align: left; margin-top: 5px;">São João da Boa Vista, SP.</p>
+            </div>
+            <div style="display: flex; gap: 20px;">
+                <a href="#" style="color: #666; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                <a href="#" style="color: #666; font-size: 1.2rem;"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="tiny">IMPERA &copy; 2026. Designed for Leaders.</div>
+    </footer>
+
+    <a href="https://wa.me/5519SEUNUMERO" class="float-wa" target="_blank" title="Fale Conosco">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Menu Mobile Toggle
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Scroll Animation (Intersection Observer)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+        document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>

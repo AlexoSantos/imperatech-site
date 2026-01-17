@@ -1,0 +1,7 @@
+{
+    "http.systemCertificatesNode": true,
+    "geminicodeassist.project": "tranquil-battery-n1xb4",
+    "security.workspace.trust.untrustedFiles": "open",
+    "diffEditor.codeLens": true,
+    "workbench.colorTheme": "Monokai Dimmed"
+}
